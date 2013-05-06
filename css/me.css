@@ -1,0 +1,140 @@
+#slideout {
+	position: fixed;
+	top: 0%;
+	right: 0;
+	min-width: 2%;
+	height: 100%;
+	text-align: center;
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+	-webkit-border-radius: 0 5px 5px 0;
+	-moz-border-radius: 0 5px 5px 0;
+	border-radius: 10px 0 0 10px;
+}
+
+#slideout_inner {
+	position: fixed;
+	top: 0%;
+	right: -100%;
+	width: 100%;
+	height: 100%;
+    text-align: left;
+    overflow:scroll;
+	background: rgba(0,0,0,0.8);
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+	-webkit-border-radius: 0 0 5px 0;
+	-moz-border-radius: 0 0 5px 0;
+	border-radius: 0 0 5px 0;
+}
+
+input[type=checkbox]:checked ~ #slideout {
+			right: 25%;
+}
+
+input[type=checkbox]:checked ~ #slideout_inner {
+			right: 0;
+}
+
+input[type=checkbox] {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+
+[for="showhide"] {
+    display: table;
+    float: left;
+    margin-left: 0%;
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: red;
+    line-height: 1.5em;
+    z-index: 5;
+    font-size: 20;
+}
+
+[for="showhide"] span:last-of-type {
+    display: none;
+    visibility: hidden;
+}
+
+input[type=checkbox]:checked ~ [for="showhide"] span:first-of-type {
+    display: none;
+    visibility: hidden;
+}
+
+input[type=checkbox]:checked ~ [for="showhide"] span:last-of-type {
+    display: table-cell;
+    visibility: visible;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+[for="showhide"]:hover {
+    background: rgba(0,0,0,0.5);
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+span {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+img {
+    float: left;
+    width: 100%;
+    height: 100%;
+}
+
+#imgbox {
+    display:table;
+    width: 80px;
+    height: 80px;
+}
+
+#imgbox:active {
+    width: 333px;
+    height: 333px;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+
+}
+
+.textback {
+    background:#0e192d;
+    background-image:url('../images/bg/grid15.png');
+    background-repeat:repeat;
+}
+
+a {
+    color: #71d1ef;
+    text-decoration: none;
+}
+
+body {
+    color:white;
+}
